@@ -6,7 +6,8 @@
   --color-light-bg: #ffffff;
   --color-button: #fff100;
   --color-button-hover: #fff787;
-  --text-muted: #ccc;
+  --color-muted: #ccc;
+  --color-border: #4a4d54;
 }
 
 @layer base {
@@ -44,3 +45,14 @@
     transform: translateY(0);
   }
 }
+
+.box_shadow_dark {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+}
+.box_shadow_light {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+/* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */

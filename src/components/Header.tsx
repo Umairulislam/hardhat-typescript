@@ -250,13 +250,17 @@ const Header = () => {
   )
 
   return (
-    <header className={`section_padding fixed top-0 left-0 right-0 z-50 bg-transparent`}>
+    <header
+      className={`section_padding fixed top-0 left-0 right-0 z-50 bg-transparent ${
+        scrolled ? "bg-white dark:bg-[#181a1f]" : ""
+      }`}
+    >
       {/* Desktop Navbar */}
       <nav className="flex justify-between items-center gap-2 container mx-auto">
         {/* Logo */}
-        <div>
+        <NavLink to="/">
           <img src={logoLight} alt="Hardhat Light Logo" width={150} height={100} />
-        </div>
+        </NavLink>
         {/* Desktop Menu */}
         <div className="hidden lg:flex justify-between items-center gap-12">
           {renderNavLinks()}

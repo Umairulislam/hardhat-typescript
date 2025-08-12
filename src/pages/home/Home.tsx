@@ -1,10 +1,11 @@
-import { Hero } from "../../components"
+import { Hero, Tools } from "../../components"
 
 const home = () => {
   return (
     <main className="pt-36 container mx-auto">
       <section className="section_padding">
         <Hero />
+        <Tools />
       </section>
     </main>
   )
