@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-dark-bg: #181a1f;
+  --color-light-bg: #ffffff;
+  --color-button: #fff100;
+  --color-button-hover: #fff787;
+  --text-muted: #ccc;
+}
+
+@layer base {
+}
+
+@layer utilities {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  .section_padding {
+    @apply p-4 md:py-6 md:px-12 xl:py-10 xl:px-20;
+  }
+
+  .btn_primary {
+    @apply bg-button text-black px-6 py-3 cursor-pointer rounded-sm text-sm transition-colors duration-300 hover:bg-button-hover;
+  }
+}
+
+.animate_up_down {
+  animation: up_down 5s ease-in-out infinite;
+}
+@keyframes up_down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
