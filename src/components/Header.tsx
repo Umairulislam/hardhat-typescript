@@ -9,7 +9,7 @@ import {
   IoMdClose,
 } from "../assets"
 import { NavLink } from "react-router"
-import { logoLight } from "../assets"
+import { logoLight, logoDark } from "../assets"
 import { ThemeContext } from "../context/ThemeContext"
 
 // Main navigation items
@@ -122,7 +122,7 @@ const tutorialSubMenu = [
 
 const Header = () => {
   // Get theme and toggleTheme from context
-  const { toggleTheme } = useContext(ThemeContext)
+  const { theme, toggleTheme } = useContext(ThemeContext)
   // State for mobile menu open/close
   const [isOpen, setIsOpen] = useState(false)
   // State for scroll position
@@ -259,7 +259,12 @@ const Header = () => {
       <nav className="flex justify-between items-center gap-2 container mx-auto">
         {/* Logo */}
         <NavLink to="/">
-          <img src={logoLight} alt="Hardhat Light Logo" width={150} height={100} />
+          <img
+            src={theme === "dark" ? logoLight : logoDark}
+            alt="Hardhat Light Logo"
+            width={150}
+            height={100}
+          />
         </NavLink>
         {/* Desktop Menu */}
         <div className="hidden lg:flex justify-between items-center gap-12">
@@ -281,7 +286,7 @@ const Header = () => {
       </nav>
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="lg:hidden fixed left-0 top-20 z-50 flex flex-col gap-5 border-r border-slate-700 h-full w-80 p-8 bg-white dark:bg-[#181a1f]">
+        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-slate-700 h-full w-80 p-8 bg-white dark:bg-[#181a1f]">
           {/* Back button for submenus */}
           {menuScreen !== "main" && (
             <button className="flex items-center gap-2" onClick={() => setMenuScreen("main")}>

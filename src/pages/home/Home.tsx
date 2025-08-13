@@ -1,12 +1,29 @@
-import { Hero, Tools } from "../../components"
+import {
+  Banner,
+  Brands,
+  Community,
+  Features,
+  Hero,
+  Tools,
+  Testimonials,
+  NomicFoundation,
+  Footer,
+} from "../../components"
 
 const home = () => {
   return (
-    <main className="pt-36 container mx-auto">
-      <section className="section_padding">
+    <main className="pt-40 ">
+      <section className="container mx-auto section_padding">
         <Hero />
         <Tools />
+        <Features />
+        <Community />
+        <Banner />
+        <Brands />
+        <Testimonials />
+        <NomicFoundation />
       </section>
+      <Footer />
     </main>
   )
 }

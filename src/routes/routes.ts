@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router"
-import { Documentation, Home, HomeLayout, Tutorial } from "../pages"
+import { Documentation, Home, HomeLayout, Plugins, Tutorial } from "../pages"
 
 const router = createBrowserRouter([
   {
@@ -12,6 +12,7 @@ const router = createBrowserRouter([
       },
       { path: "docs", Component: Documentation },
       { path: "tutorial", Component: Tutorial },
+      { path: "plugins", Component: Plugins },
     ],
   },
 ])
