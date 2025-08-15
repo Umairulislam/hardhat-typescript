@@ -16,7 +16,7 @@ import { ThemeContext } from "../context/ThemeContext"
 const navItems = [
   { label: "Home", to: "/", exact: true },
   { label: "Tools", to: "/#tools" },
-  { label: "Plugins", to: "/plugins" },
+  { label: "Plugins", to: "/hardhat-runner/plugins" },
   { label: "Documentation", to: "/docs" },
   { label: "Tutorial", to: "/tutorial" },
 ]
@@ -208,7 +208,7 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <div className="border-t border-slate-700 pt-4 mt-4">{renderSocialIcons()}</div>
+      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
     </div>
   )
 
@@ -230,7 +230,7 @@ const Header = () => {
           </div>
         ))}
       </ul>
-      <div className="border-t border-slate-700 pt-4 mt-4">{renderSocialIcons()}</div>
+      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
     </div>
   )
 
@@ -245,14 +245,14 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <div className="border-t border-slate-700 pt-4 mt-4">{renderSocialIcons()}</div>
+      <div className="border-t border-border pt-4 mt-4">{renderSocialIcons()}</div>
     </div>
   )
 
   return (
     <header
       className={`section_padding fixed top-0 left-0 right-0 z-50 bg-transparent ${
-        scrolled ? "bg-white dark:bg-[#181a1f]" : ""
+        scrolled ? "bg-white dark:bg-dark-bg" : ""
       }`}
     >
       {/* Desktop Navbar */}
@@ -286,7 +286,7 @@ const Header = () => {
       </nav>
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-slate-700 h-full w-80 p-8 bg-white dark:bg-[#181a1f]">
+        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-border h-full w-80 p-8 bg-white dark:bg-dark-bg">
           {/* Back button for submenus */}
           {menuScreen !== "main" && (
             <button className="flex items-center gap-2" onClick={() => setMenuScreen("main")}>
@@ -299,7 +299,7 @@ const Header = () => {
           {menuScreen === "documentation" && renderDocumentationSubmenu()}
           {menuScreen === "tutorial" && renderTutorialSubmenu()}
           {/* Social icons and dark mode at bottom */}
-          <div className="flex justify-between items-center border-t border-slate-700 pt-4">
+          <div className="flex justify-between items-center border-t border-border pt-4">
             {renderSocialIcons()}
             <button
               className="text-2xl cursor-pointer"

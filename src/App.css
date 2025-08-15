@@ -8,6 +8,8 @@
   --color-button-hover: #fff787;
   --color-muted: #6e6f70;
   --color-border: #4a4d54;
+  --color-gray: #b0b2b5;
+  --color-link: #edcf00;
 }
 
 @layer base {
@@ -20,6 +22,10 @@
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     scroll-behavior: smooth;
+  }
+
+  u {
+    @apply no-underline text-link cursor-pointer;
   }
 
   .section_padding {
