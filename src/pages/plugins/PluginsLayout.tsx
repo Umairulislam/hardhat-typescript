@@ -2,9 +2,8 @@ import { Outlet } from "react-router"
 
 const PluginsLayout = () => {
   return (
-    <main>
-      {/* <h1>Sidenavbar here</h1> */}
-      <section>
+    <main className="pt-28">
+      <section className="container mx-auto">
         <Outlet />
       </section>
     </main>
