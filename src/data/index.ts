@@ -73,7 +73,15 @@ import PluginToolboxViem from "../components/PluginToolboxViem"
 import PluginVerify from "../components/PluginVerify"
 import PluginViem from "../components/PluginViem"
 import PluginWeb3V4 from "../components/PluginWeb3V4"
-import type { Brands, Features, Testimonials, Tools } from "../types/types"
+import type {
+  Brands,
+  CommunityPlugins,
+  Features,
+  OfficialPlugins,
+  Plugins,
+  Testimonials,
+  Tools,
+} from "../types/types"
 
 export const tools: Tools[] = [
   {
@@ -387,7 +395,7 @@ export const testimonials: Testimonials[] = [
   },
 ]
 
-export const officialPlugins = [
+export const officialPlugins: OfficialPlugins[] = [
   {
     id: 1,
     name: "@nomicfoundation/hardhat-toolbox",
@@ -496,7 +504,7 @@ export const officialPlugins = [
   },
 ]
 
-export const communityPlugins = [
+export const communityPlugins: CommunityPlugins[] = [
   {
     id: 1,
     name: "solidity-coverage",
@@ -719,7 +727,7 @@ export const communityPlugins = [
   },
 ]
 
-export const plugins = {
+export const plugins: Record<string, Plugins> = {
   "nomicfoundation-hardhat-toolbox": {
     title: "Hardhat Toolbox",
     component: PluginToolbox,

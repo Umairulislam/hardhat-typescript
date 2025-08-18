@@ -2,14 +2,19 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-dark-bg: #181a1f;
-  --color-light-bg: #ffffff;
-  --color-button: #fff100;
-  --color-button-hover: #fff787;
-  --color-muted: #6e6f70;
-  --color-border: #4a4d54;
-  --color-gray: #b0b2b5;
-  --color-link: #edcf00;
+  --color-bg-dark: #181a1f; /* Dark theme background */
+  --color-bg-light: #ffffff; /* Light theme background */
+
+  --color-primary: #fff100; /* Primary brand color (buttons, highlights) */
+  --color-primary-hover: #fff787; /* Hover state for primary */
+
+  --color-muted: #6e6f70; /* Muted / secondary text color */
+  --color-border: #4a4d54; /* Borders, dividers */
+
+  --color-gray: #b0b2b5; /* Default text on dark theme */
+
+  --color-link-dark: #d39f24; /* Link color in dark theme */
+  --color-link-light: #edcf00; /* Link color in light theme */
 }
 
 @layer base {
@@ -25,7 +30,7 @@
   }
 
   u {
-    @apply no-underline text-link cursor-pointer;
+    @apply no-underline text-link-dark dark:text-link-light cursor-pointer hover:opacity-75;
   }
 
   .section_padding {
@@ -37,7 +42,7 @@
   }
 
   .btn_primary {
-    @apply bg-button text-black  hover:bg-button-hover;
+    @apply bg-primary text-black  hover:bg-primary-hover;
   }
 
   .btn_secondary {

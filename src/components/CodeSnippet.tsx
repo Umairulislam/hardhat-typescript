@@ -1,11 +1,17 @@
 import { useContext } from "react"
 import { ThemeContext } from "../context/ThemeContext"
-import { CodeBlock, CopyBlock, dracula, github } from "react-code-blocks"
+import { CopyBlock, dracula, github } from "react-code-blocks"
 
-const CodeSnippet = ({ code, language, showLineNumbers }) => {
+type CodeSnippetProps = {
+  code: string
+  language: string
+  showLineNumbers: boolean
+}
+
+const CodeSnippet = ({ code, language, showLineNumbers }: CodeSnippetProps) => {
   const { theme } = useContext(ThemeContext)
   return (
-    <div className="border border-border">
+    <div className="border border-border rounded-sm">
       <CopyBlock
         text={code}
         language={language}

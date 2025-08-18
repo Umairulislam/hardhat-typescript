@@ -21,10 +21,10 @@ const OfficialPlugins = () => {
               <div className="flex gap-3 flex-wrap">
                 <Link
                   to={plugin.name.replace("@", "").replace("/", "-")}
-                  className="text-link text-lg font-bold"
+                  className="text-lg font-bold"
                 >
-                  {plugin.name}
-                </Link>{" "}
+                  <u>{plugin.name}</u>
+                </Link>
                 <p className="text-muted border-l border-border pl-2">{plugin.foundation}</p>
               </div>
               <div>

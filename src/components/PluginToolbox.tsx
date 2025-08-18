@@ -1,5 +1,5 @@
-import { Link } from "react-router"
 import CodeSnippet from "./CodeSnippet"
+import PageNavigator from "./PageNavigator"
 
 const PluginToolbox = () => {
   const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
@@ -65,20 +65,14 @@ const PluginToolbox = () => {
       </p>
 
       <CodeSnippet code={snippet1} language="javascript" showLineNumbers={true} />
-      <br />
-      <div className="border-t border-gray-600 pt-4 flex justify-between text-tertiary text-[10px] sm:text-xs">
-        <Link to="/hardhat-runner/plugins/#" className="flex items-center space-x-2 ">
-          <span>&larr;</span>
-          <span>Environment variables</span>
-        </Link>
-        <Link
-          to="/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox-viem"
-          className="flex items-center space-x-2 "
-        >
-          <span>@nomicfoundation/hardhat-toolbox-viem</span>
-          <span>&rarr;</span>
-        </Link>
-      </div>
+
+      <PageNavigator
+        prev={{ label: "Environment variables", href: "/hardhat-runner/plugins/#" }}
+        next={{
+          label: "@nomicfoundation/hardhat-toolbox-viem",
+          href: "/hardhat-runner/plugins/nomicfoundation-hardhat-toolbox-viem",
+        }}
+      />
     </section>
   )
 }

@@ -111,7 +111,7 @@ const documentationSubmenu = [
 
 const Sidebar = () => {
   return (
-    <section className="hidden lg:block fixed left-0 top top-24 border-border h-[calc(100vh-100px)] w-sm p-10 bg-white dark:bg-dark-bg overflow-y-auto">
+    <section className="hidden lg:block fixed left-0 top top-24 border-border h-[calc(100vh-100px)] w-sm p-10 bg-white dark:bg-bg-dark overflow-y-auto">
       <ul className="flex flex-col gap-4 text-black dark:text-gray">
         {documentationSubmenu.map((section, i) => (
           <div key={i}>
@@ -121,7 +121,11 @@ const Sidebar = () => {
                 <li key={j}>
                   <NavLink
                     to={menu.to}
-                    className={({ isActive }) => (isActive ? "text-link" : "hover:text-link")}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-link-dark dark:text-link-light"
+                        : "hover:text-link-dark dark:hover:text-link-light"
+                    }
                   >
                     {menu.label}
                   </NavLink>

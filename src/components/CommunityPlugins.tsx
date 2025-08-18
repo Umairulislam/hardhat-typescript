@@ -1,7 +1,7 @@
 import { Link } from "react-router"
 import { communityPlugins } from "../data"
 
-const OfficialPlugins = () => {
+const CommunityPlugins = () => {
   return (
     <section className="section_padding text-black dark:text-gray">
       <div>
@@ -12,9 +12,9 @@ const OfficialPlugins = () => {
               <div className="flex gap-3 flex-wrap">
                 <Link
                   to={plugin.name.replace("@", "").replace("/", "")}
-                  className="text-link text-lg font-bold"
+                  className="text-lg font-bold"
                 >
-                  {plugin.name}
+                  <u>{plugin.name}</u>
                 </Link>
                 <p className="text-muted border-l border-border pl-2">{plugin.foundation}</p>
               </div>
@@ -39,4 +39,4 @@ const OfficialPlugins = () => {
   )
 }
 
-export default OfficialPlugins
+export default CommunityPlugins

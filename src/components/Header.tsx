@@ -252,7 +252,7 @@ const Header = () => {
   return (
     <header
       className={`section_padding fixed top-0 left-0 right-0 z-50 bg-transparent ${
-        scrolled ? "bg-white dark:bg-dark-bg" : ""
+        scrolled ? "bg-white dark:bg-bg-dark" : ""
       }`}
     >
       {/* Desktop Navbar */}
@@ -286,7 +286,7 @@ const Header = () => {
       </nav>
       {/* Mobile Menu */}
       {isOpen && (
-        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-border h-full w-80 p-8 bg-white dark:bg-dark-bg">
+        <nav className="lg:hidden fixed left-0 top-16 z-50 flex flex-col gap-5 border-r border-border h-full w-80 p-8 bg-white dark:bg-bg-dark">
           {/* Back button for submenus */}
           {menuScreen !== "main" && (
             <button className="flex items-center gap-2" onClick={() => setMenuScreen("main")}>
