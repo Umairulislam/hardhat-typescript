@@ -11,7 +11,7 @@ export { default as Footer } from "./Footer"
 export { default as OfficialPlugins } from "./OfficialPlugins"
 export { default as CommunityPlugins } from "./CommunityPlugins"
 export { default as Sidebar } from "./Sidebar"
-export { default as PageNavigator } from "./PageNavigator"
+export { default as ScrollToTop } from "./ScrollToTop"
 
 // PLugins
 export { default as PluginToolbox } from "./PluginToolbox"

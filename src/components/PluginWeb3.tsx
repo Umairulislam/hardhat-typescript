@@ -1,25 +1,28 @@
-import PageNavigator from "./PageNavigator"
 import CodeSnippet from "./CodeSnippet"
+import PageNavigator from "./PageNavigator"
 
-const PluginWeb3V4 = () => {
-  const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-web3-v4 'web3@4'`
-  const snippet2 = `require("@nomicfoundation/hardhat-web3-v4");`
-  const snippet3 = `import "@nomifoundation/hardhat-web3-v4";`
-  const snippet4 = `require("@nomicfoundation/hardhat-web3-v4");
+const PluginWeb3 = () => {
+  const snippet1 = `npm install --save-dev @nomiclabs/hardhat-web3 'web3@^1.0.0-beta.36'`
+  const snippet2 = `require("@nomiclabs/hardhat-web3");`
+  const snippet3 = `import "@nomiclabs/hardhat-web3";`
+  const snippet4 = `require("@nomiclabs/hardhat-web3");
 
 // task action function receives the Hardhat Runtime Environment as second argument
 task("accounts", "Prints accounts", async (_, { web3 }) => {
   console.log(await web3.eth.getAccounts());
-});`
+});
+
+module.exports = {};`
 
   return (
     <section
       className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
     >
-      <h1 className="tertiary_heading">hardhat-web3-v4</h1>
+      <h1 className="tertiary_heading">hardhat-web3</h1>
       <p>
-        This plugin is a collaboration between the Nomic Foundation and
-        <u> ChainSafe </u> integrate <u>Web3.js </u> v4 into <u>hardhat </u>.
+        This plugin integrates
+        <u> Web3.js </u> 1.x into
+        <u> hardhat</u>.
       </p>
 
       <h2 className="text-xl font-semibold border-b border-border pb-2">What</h2>
@@ -31,11 +34,6 @@ task("accounts", "Prints accounts", async (_, { web3 }) => {
       <CodeSnippet code={snippet2} language="javascript" />
       <p>Or, if you are using TypeScript, add this to your hardhat.config.ts:</p>
       <CodeSnippet code={snippet3} language="javascript" />
-      <p>
-        By default, contract invocations will not be typesafe. Consider installing
-        <u> @chainsafe/hardhat-ts-artifact-plugin</u> to obtain available contract methods and
-        events. Read more about inferring types <u>here</u>.
-      </p>
 
       <h4 className="text-xl font-semibold border-b border-border pb-2">Tasks</h4>
       <p>This plugin creates no additional tasks.</p>
@@ -44,10 +42,10 @@ task("accounts", "Prints accounts", async (_, { web3 }) => {
       <p>This plugin adds the following elements to the HardhatRuntimeEnvironment:</p>
       <ul className="list-disc ml-4 flex flex-col gap-1">
         <li>
-          <strong>web3:</strong> The Web3.js module.
+          <strong>web3</strong>: The Web3.js module.
         </li>
         <li>
-          <strong>web3:</strong> An instantiated Web3.js object connected to the selected network.
+          <strong>web3</strong>: An instantiated Web3.js object connected to the selected network.
         </li>
       </ul>
 
@@ -65,16 +63,16 @@ task("accounts", "Prints accounts", async (_, { web3 }) => {
 
       <PageNavigator
         prev={{
-          label: "@nomicfoundation/hardhat-ledger",
-          href: "/hardhat-runner/plugins/nomicfoundation-hardhat-ledger",
+          label: "@nomiclabs/hardhat-solpp",
+          href: "/hardhat-runner/plugins/nomiclabs-hardhat-solpp",
         }}
         next={{
-          label: "@nomiclabs/hardhat-vyper",
-          href: "/hardhat-runner/plugins/nomiclabs-hardhat-vyper",
+          label: "@nomiclabs/hardhat-truffle5",
+          href: "/hardhat-runner/plugins/nomiclabs-hardhat-truffle5",
         }}
       />
     </section>
   )
 }
 
-export default PluginWeb3V4
+export default PluginWeb3

@@ -14,7 +14,7 @@ interface PageNavigatorProps {
 
 const PageNavigator: React.FC<PageNavigatorProps> = ({ prev, next }) => {
   return (
-    <div className="mt-10 border-t border-border pt-4 flex justify-between text-xs sm:text-base">
+    <div className="mt-10 border-t border-border pt-4 flex justify-between gap-1 text-xs sm:text-base">
       {prev ? (
         <Link to={prev.href} className="flex items-center gap-1">
           <FaArrowLeft />

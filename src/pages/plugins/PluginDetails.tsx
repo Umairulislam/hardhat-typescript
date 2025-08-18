@@ -1,6 +1,6 @@
 import { useParams } from "react-router"
 import { plugins } from "../../data"
-import { Sidebar } from "../../components"
+import { ScrollToTop, Sidebar } from "../../components"
 
 const PluginDetails = () => {
   const { pluginId } = useParams<{ pluginId: string }>()
@@ -18,6 +18,7 @@ const PluginDetails = () => {
       </section>
       <section>
         <plugin.component />
+        <ScrollToTop />
       </section>
     </main>
   )

@@ -86,25 +86,34 @@ const documentationSubmenu = [
       },
       {
         label: "@nomiclabs/hardhat-vyper",
-        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-vyper",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-vyper",
       },
       {
         label: "@nomiclabs/hardhat-solhint",
-        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-solhint",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-solhint",
       },
       {
-        label: "@nomiclabs/hardhat-waffle",
-        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-waffle",
+        label: "@nomiclabs/hardhat-solpp",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-solpp",
       },
+
       {
         label: "@nomiclabs/hardhat-web3",
-        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-web3",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-web3",
       },
       {
         label: "@nomiclabs/hardhat-truffle5",
-        to: "/hardhat-runner/plugins/nomicfoundation-hardhat-truffle5",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-truffle5",
       },
-      { label: "Community plugins", to: "/hardhat-runner/plugins/nomicfoundation-community" },
+      {
+        label: "@nomiclabs/hardhat-web3-legacy",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-web3-legacy",
+      },
+      {
+        label: "@nomiclabs/hardhat-truffle4",
+        to: "/hardhat-runner/plugins/nomiclabs-hardhat-truffle4",
+      },
+      { label: "Community plugins", to: "/hardhat-runner/plugins#community-plugins" },
     ],
   },
 ]

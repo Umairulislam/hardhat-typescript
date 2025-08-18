@@ -54,24 +54,21 @@ import {
   avatar3,
   avatar4,
 } from "../assets"
-import // PluginChaiMatchers,
-// PluginEthers,
-// PluginFoundry,
-// PluginLedger,
-// PluginToolbox,
-// PluginToolboxViem,
-// PluginVerify,
-// PluginViem,
-// PluginWeb3V4,
-"../components"
 import PluginChaiMatchers from "../components/PluginChaiMatchers"
 import PluginEthers from "../components/PluginEthers"
-import PluginFoundry from "../components/PluginToolbox"
+import PluginFoundry from "../components/PluginFoundry"
 import PluginLedger from "../components/PluginLedger"
+import PluginSolhint from "../components/PluginSolhint"
+import PluginSolpp from "../components/PluginSolpp"
 import PluginToolbox from "../components/PluginToolbox"
 import PluginToolboxViem from "../components/PluginToolboxViem"
+import PluginTruffle4 from "../components/PluginTruffle4"
+import PluginTruffle5 from "../components/PluginTruffle5"
 import PluginVerify from "../components/PluginVerify"
 import PluginViem from "../components/PluginViem"
+import PluginVyper from "../components/PluginVyper"
+import PluginWeb3 from "../components/PluginWeb3"
+import PluginWeb3Legacy from "../components/PluginWeb3Legacy"
 import PluginWeb3V4 from "../components/PluginWeb3V4"
 import type {
   Brands,
@@ -763,5 +760,33 @@ export const plugins: Record<string, Plugins> = {
   "nomicfoundation-hardhat-web3-v4": {
     title: "Hardhat Web3 v4",
     component: PluginWeb3V4,
+  },
+  "nomiclabs-hardhat-vyper": {
+    title: "Hardhat Vyper",
+    component: PluginVyper,
+  },
+  "nomiclabs-hardhat-solhint": {
+    title: "Hardhat Solhint",
+    component: PluginSolhint,
+  },
+  "nomiclabs-hardhat-solpp": {
+    title: "Hardhat Solpp",
+    component: PluginSolpp,
+  },
+  "nomiclabs-hardhat-web3": {
+    title: "Hardhat Web3",
+    component: PluginWeb3,
+  },
+  "nomiclabs-hardhat-truffle5": {
+    title: "Hardhat Truffle5",
+    component: PluginTruffle5,
+  },
+  "nomiclabs-hardhat-web3-legacy": {
+    title: "Hardhat Web3 Legacy",
+    component: PluginWeb3Legacy,
+  },
+  "nomiclabs-hardhat-truffle4": {
+    title: "Hardhat truffle 4",
+    component: PluginTruffle4,
   },
 }

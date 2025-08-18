@@ -5,7 +5,7 @@ const PluginToolbox = () => {
   const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
   return (
     <section
-      className={`flex flex-col gap-5 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
+      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
     >
       <h1 className="tertiary_heading">Hardhat Toolbox</h1>
 
@@ -64,7 +64,7 @@ const PluginToolbox = () => {
         like this:
       </p>
 
-      <CodeSnippet code={snippet1} language="javascript" showLineNumbers={true} />
+      <CodeSnippet code={snippet1} language="javascript" />
 
       <PageNavigator
         prev={{ label: "Environment variables", href: "/hardhat-runner/plugins/#" }}

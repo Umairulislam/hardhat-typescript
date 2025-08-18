@@ -3,7 +3,7 @@ import { communityPlugins } from "../data"
 
 const CommunityPlugins = () => {
   return (
-    <section className="section_padding text-black dark:text-gray">
+    <section id="community-plugins" className="section_padding text-black dark:text-gray">
       <div>
         <h2 className="text-2xl font-semibold">Community Plugins</h2>
         <div className="mt-8 flex flex-col gap-10">
