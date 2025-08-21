@@ -1,10 +1,8 @@
-import PageNavigator from "./PageNavigator"
+import PageNavigator from "../../components/PageNavigator"
 
 const PluginFoundry = () => {
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-foundry</h1>
       <p>
         This plugin makes it easier to use Hardhat and <u>Foundry </u> in the same project.

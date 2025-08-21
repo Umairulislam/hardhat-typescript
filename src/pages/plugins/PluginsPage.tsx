@@ -1,6 +1,6 @@
 import { CommunityPlugins, OfficialPlugins } from "../../components"
 
-const Plugins = () => {
+const PluginsPage = () => {
   return (
     <main>
       <section className="max-w-4xl mx-auto">
@@ -11,4 +11,4 @@ const Plugins = () => {
   )
 }
 
-export default Plugins
+export default PluginsPage

@@ -1,5 +1,5 @@
-import CodeSnippet from "./CodeSnippet"
-import PageNavigator from "./PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
 
 const PluginViem = () => {
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-viem viem`
@@ -128,9 +128,7 @@ const { contractAddress } = await publicClient.waitForTransactionReceipt({
 const contract: ContractTypesMap["ContractName"];`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-viem</h1>
       <p>
         <u>Hardhat</u> plugin for integration with <u>Viem</u> , a lightweight, composable, and

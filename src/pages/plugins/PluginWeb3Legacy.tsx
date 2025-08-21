@@ -1,5 +1,5 @@
-import PageNavigator from "./PageNavigator"
-import CodeSnippet from "./CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
 
 const PluginWeb3Legacy = () => {
   const snippet1 = `npm install --save-dev @nomiclabs/hardhat-web3-legacy web3@^0.20.7`
@@ -7,9 +7,7 @@ const PluginWeb3Legacy = () => {
   const snippet3 = `import "@nomiclabs/hardhat-web3-legacy";`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-web3-legacy</h1>
       <p>
         This plugin integrates <u> Web3.js </u> 0.20x into <u>Hardhat</u>

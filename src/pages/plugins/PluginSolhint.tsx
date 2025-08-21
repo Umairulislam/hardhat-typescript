@@ -1,5 +1,5 @@
-import PageNavigator from "./PageNavigator"
-import CodeSnippet from "./CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
 
 const PluginSolhint = () => {
   const snippet1 = `npm install --save-dev @nomiclabs/hardhat-solhint`
@@ -7,9 +7,7 @@ const PluginSolhint = () => {
   const snippet3 = `import "@nomiclabs/hardhat-solhint";`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-solhint</h1>
       <p>
         <u> Hardhat </u> plugin for integration with

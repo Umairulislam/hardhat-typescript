@@ -1,5 +1,5 @@
-import CodeSnippet from "./CodeSnippet"
-import PageNavigator from "./PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
 
 const PluginChaiMatchers = () => {
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-chai-matchers`
@@ -23,9 +23,7 @@ await expect(tx).to.changeEtherBalance(...)
 await expect(tx).to.changeTokenBalance(...)`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">Hardhat Chai Matchers</h1>
       <p>
         This plugin adds Ethereum-specific capabilities to the <u>Chai</u> assertion library, making
@@ -74,7 +72,7 @@ await expect(tx).to.changeTokenBalance(...)`
       <p>Which means you can't do:</p>
       <CodeSnippet code={snippet6} language="javascript" />
       <p>To work around this limitation, write separate assertions for each matcher:</p>
-      <CodeSnippet code={snippet6} language="javascript" />
+      <CodeSnippet code={snippet7} language="javascript" />
       <p>
         If you are interested in seeing an implementation of chaining for async matchers, please
         visit the GitHub issue <u>#4235</u> and leave an upvote or comment.

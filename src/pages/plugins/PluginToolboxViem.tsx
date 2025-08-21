@@ -1,13 +1,11 @@
-import CodeSnippet from "./CodeSnippet"
-import PageNavigator from "./PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
 
 const PluginToolboxViem = () => {
   const snippet1 = `import helpers from "@nomicfoundation/hardhat-toolbox/network-helpers";`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">Hardhat Toolbox (Viem based)</h1>
 
       <p>

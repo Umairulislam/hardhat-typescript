@@ -10,7 +10,7 @@ import {
   Footer,
 } from "../../components"
 
-const home = () => {
+const HomePage = () => {
   return (
     <main className="pt-40">
       <section className="container mx-auto section_padding">
@@ -28,4 +28,4 @@ const home = () => {
   )
 }
 
-export default home
+export default HomePage

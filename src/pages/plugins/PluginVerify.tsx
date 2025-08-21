@@ -1,5 +1,5 @@
-import CodeSnippet from "./CodeSnippet"
-import PageNavigator from "./PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
 
 const PluginVerify = () => {
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-verify`
@@ -171,9 +171,7 @@ if (!instance.isVerified("0x123abc...")) {
 }`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-verify</h1>
       <p>
         <u>Hardhat</u> plugin to verify the source of code of deployed contracts.

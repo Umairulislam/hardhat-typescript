@@ -1,5 +1,5 @@
-import PageNavigator from "./PageNavigator"
-import CodeSnippet from "./CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
 
 const PluginWeb3V4 = () => {
   const snippet1 = `npm install --save-dev @nomicfoundation/hardhat-web3-v4 'web3@4'`
@@ -13,9 +13,7 @@ task("accounts", "Prints accounts", async (_, { web3 }) => {
 });`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-web3-v4</h1>
       <p>
         This plugin is a collaboration between the Nomic Foundation and

@@ -1,5 +1,5 @@
-import CodeSnippet from "./CodeSnippet"
-import PageNavigator from "./PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
 
 const PluginVyper = () => {
   const snippet1 = `npm install --save-dev @nomiclabs/hardhat-vyper`
@@ -33,9 +33,7 @@ def _mint_for_testing(_to: address, _token_id: uint256):
 #@ endif`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
+    <section className="flex flex-col gap-6 justify-center">
       <h1 className="tertiary_heading">hardhat-vyper</h1>
       <p>
         <u> Hardhat </u> plugin to develop smart contracts with Vyper.

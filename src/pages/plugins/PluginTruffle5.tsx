@@ -1,36 +1,30 @@
-import CodeSnippet from "./CodeSnippet"
-import PageNavigator from "./PageNavigator"
+import CodeSnippet from "../../components/CodeSnippet"
+import PageNavigator from "../../components/PageNavigator"
 
-const PluginTruffle4 = () => {
+const PluginTruffle5 = () => {
   const snippet1 = `npm install --save-dev @nomiclabs/hardhat-truffle4 @nomiclabs/hardhat-web3-legacy web3@^0.20.7`
   const snippet2 = `require("@nomiclabs/hardhat-truffle4");`
   const snippet3 = `import "@nomiclabs/hardhat-truffle4";`
 
   return (
-    <section
-      className={`flex flex-col gap-6 justify-center mx-auto lg:ml-[24rem] p-4 md:py-6 md:px-12 lg:py-12 lg:px-32 text-black dark:text-gray`}
-    >
-      <h1 className="tertiary_heading">hardhat-web3-legacy</h1>
+    <section className="flex flex-col gap-6 justify-center">
+      <h1 className="tertiary_heading">hardhat-truffle5</h1>
       <p>
-        <u>Hardhat</u> plugin for integration with TruffleContract from Truffle 4
+        <u> Hardhat </u>
+        plugin for integration with TruffleContract from Truffle 5. This allows tests and scripts
+        written for Truffle to work with Hardhat.
       </p>
 
       <h2 className="text-xl font-semibold border-b border-border pb-2">What</h2>
       <p>
-        This plugin brings to Hardhat TruffleContracts from Truffle 4. With it you can call{" "}
-        <u>contract() and artifacts.require() </u> like you normally would with Truffle. Interact
+        This plugin brings to Hardhat TruffleContracts from Truffle 5. With it you can call{" "}
+        <u>contract() and artifacts.require()</u> like you normally would with Truffle. Interact
         with your contracts with a familiar API from tasks, scripts and tests.
       </p>
-      <p>
-        Additionally, you can{" "}
-        <span className="font-semibold">
-          migrate your contracts to Solidity 5 without needing to migrate your tests to Truffle 5.
-        </span>
-      </p>
 
-      <h3 className="text-xl font-semibold border-b border-border pb-2">Required Plugins</h3>
+      <h3 className="text-xl font-semibold border-b border-border pb-2">Required plugins</h3>
       <p>
-        This plugin requires <u>hardhat-web3-legacy</u> as a prerequisite.
+        This plugin requires <u>hardhat-web3</u> as a prerequisite.
       </p>
 
       <h4 className="text-xl font-semibold border-b border-border pb-2">Installation</h4>
@@ -50,24 +44,26 @@ const PluginTruffle4 = () => {
       </p>
 
       <h6 className="text-xl font-semibold border-b border-border pb-2">Usage</h6>
-      <p>There are no additional steps you need to take for this plugin to work.</p>
       <p>
-        Install it, run npx hardhat test and your Truffle tests should run with no need to make any
-        modifications.
+        There are no additional steps you need to take for this plugin to work. Install it, run npx
+        hardhat test and your Truffle tests should run with no need to make any modifications.
+      </p>
+      <p>
+        Take a look at the <u>testing guide</u> for a tutorial using it.
       </p>
 
       <PageNavigator
         prev={{
-          label: "@nomiclabs/hardhat-web3-legacy",
-          href: "/hardhat-runner/plugins/nomiclabs-hardhat-web3-legacy",
+          label: "@nomiclabs/hardhat-web3",
+          href: "/hardhat-runner/plugins/nomiclabs-hardhat-web3",
         }}
         next={{
-          label: "Community plugins",
-          href: "/hardhat-runner/plugins#community-plugins",
+          label: "@nomiclabs/hardhat-web3-legacy",
+          href: "/hardhat-runner/plugins/nomiclabs-hardhat-web3-legacy",
         }}
       />
     </section>
   )
 }
 
-export default PluginTruffle4
+export default PluginTruffle5
